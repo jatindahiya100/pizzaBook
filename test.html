@@ -1,0 +1,4 @@
+SELECT food_items.item_ID, food_items.image, food_items.item_Name, food_items.item_Info, food_items.total_Stars, food_items.total_Reviews,
+food_items.time_Required,food_items.description,
+additional_info.price, additional_info.size, additional_info.calorie FROM food_items LEFT JOIN additional_info 
+ON food_items.item_ID = additional_info.item_ID WHERE additional_info.size = "S";

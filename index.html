@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#f54748">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#f54748">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#f54748">
+    <!-- Importing jquery for AJAX -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/basket.css">
+    <title>PizzaBook | Home</title>
+</head>
+
+<body>
+
+    <div id="header"></div>
+    <div id="root"></div>
+
+</body>
+
+<script>
+    window.addEventListener('load', function () {
+        // Loading header
+        $('#header').load("header.html");
+        $('#root').load("main.html").delay(1000).fadeIn();
+    });
+</script>
+
+
+</html>

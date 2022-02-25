@@ -1,0 +1,34 @@
+<header>
+    <div class="logo">
+        <a href="">Pizza<strong>Book</strong></a>
+    </div>
+
+    <div class="basket">
+        <img src="images/shopping-bag.png" alt="">
+        <label id="cart_count" for="total_items"></label>
+    </div>
+</header>
+
+<script>
+    function count_cart_items() {
+        if (typeof (Storage) !== "undefined") {
+            // Code for localStorage/sessionStorage.
+            var count = JSON.parse(localStorage.getItem("basket_items"));
+            if (count == null) {
+                $("#cart_count").html(0);
+
+            } else {
+                // console.log(count.length);
+                $("#cart_count").html(count.length);
+            }
+        } else {
+            // Sorry! No Web Storage support..
+        }
+    }
+    count_cart_items();
+
+    $(document).on("click", ".basket", function () {
+        // alert("clicked");
+        $("#root").fadeOut().load("basket.html").fadeIn();
+    });
+</script>
